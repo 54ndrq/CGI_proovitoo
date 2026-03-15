@@ -1,0 +1,28 @@
+.attribute_filter {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow-sm);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+}

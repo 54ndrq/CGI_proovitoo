@@ -1,0 +1,30 @@
+.table-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.restaurant-area {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.area-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.area-tables {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}

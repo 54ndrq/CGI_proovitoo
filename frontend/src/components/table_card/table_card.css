@@ -1,0 +1,123 @@
+.table-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+}
+
+.table-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.table-card--unavailable {
+    opacity: 0.7;
+    background-color: #f7f6f3;
+}
+
+.table-card--dimmed {
+    opacity: 0.6;
+    filter: grayscale(10%);
+}
+
+.table-card--recommended {
+    border: 2px solid var(--color-accent);
+    background-color: #524552;
+    box-shadow: 0 4px 12px rgba(181, 101, 29, 0.25);
+}
+
+.table-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-card-number {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.table-card-status {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.status--available {
+    color: var(--color-available);
+    background: var(--color-available-bg);
+}
+
+.status--reserved {
+    color: var(--color-reserved);
+    background: var(--color-reserved-bg);
+}
+
+.table-card-details {
+    display: flex;
+    gap: 24px;
+}
+
+.table-card-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.detail-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.table-card-attributes {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.attribute-badge {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.table-card-reserve {
+    padding: 10px;
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.2s, opacity 0.2s;
+    cursor: pointer;
+}
+
+.table-card-reserve:hover {
+    background: var(--color-accent-hover);
+}
+
+.table-card-reserve:disabled {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+    opacity: 0.8;
+}

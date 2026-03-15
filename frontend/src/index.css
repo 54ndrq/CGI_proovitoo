@@ -1,0 +1,117 @@
+:root {
+  --color-bg: #faf8f5;
+  --color-surface: #ffffff;
+  --color-text: #2d2a26;
+  --color-text-secondary: #6b665e;
+  --color-border: #e8e4df;
+  --color-accent: #b5651d;
+  --color-accent-hover: #9a5518;
+  --color-accent-light: rgba(181, 101, 29, 0.08);
+  --color-available: #2d8a4e;
+  --color-available-bg: rgba(45, 138, 78, 0.1);
+  --color-reserved: #b04040;
+  --color-reserved-bg: rgba(176, 64, 64, 0.1);
+  --color-disabled: #c4c0ba;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a1816;
+    --color-surface: #252220;
+    --color-text: #e8e4df;
+    --color-text-secondary: #9c978f;
+    --color-border: #3a3632;
+    --color-accent: #d4914a;
+    --color-accent-hover: #e0a05e;
+    --color-accent-light: rgba(212, 145, 74, 0.12);
+    --color-available: #4aba6e;
+    --color-available-bg: rgba(74, 186, 110, 0.12);
+    --color-reserved: #d06060;
+    --color-reserved-bg: rgba(208, 96, 96, 0.12);
+    --color-disabled: #5a5650;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-primary:disabled {
+  background-color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-text-secondary);
+  color: var(--color-text);
+}
