@@ -1,6 +1,7 @@
 HELP.md
 .gradle
 build/
+.idea
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -35,3 +36,11 @@ out/
 
 ### VS Code ###
 .vscode/
+
+
+### Maven ###
+target/
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+**/.mvn/wrapper/maven-wrapper.zip
+**/.mvn/wrapper/apache-maven-*/

@@ -2,17 +2,38 @@
 
 ## Prerequisites
 
-- Java 25
-- Maven (installed and available in PATH)
-- Node.js 20+
+- Java 25 (Required for backend)
+- Node.js 20+ (Required for frontend)
+- Maven (Required for backend build/run, but is automatically handled by the included wrapper)
 
 ## How to run Backend
 
-The backend is a Spring Boot application using Maven.
+The backend is a Spring Boot application.
 
-1. cd `backend`
+### Standard method (Bash / Zsh / Git Bash)
+
+1. Open a terminal in the `backend/` directory.
+2. Run the wrapper script:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+
+### Windows (Command Prompt / PowerShell)
+
+1. Open a terminal in the `backend/` directory.
+2. Run the wrapper script:
+   ```cmd
+   mvnw.cmd spring-boot:run
+   ```
+   *Or in PowerShell:* `.\mvnw.cmd spring-boot:run`
+
+### Manual method (if Maven is installed globally)
+
+1. `cd backend`
 2. `mvn spring-boot:run`
-   *The H2 database will be populated automatically. You can view it at http://localhost:8080/h2-console*
+   *Ensure your JAVA_HOME points to JDK 25!*
+
+*The H2 database will be populated automatically. You can view it at http://localhost:8080/h2-console*
 
 ## How to run Frontend
 
